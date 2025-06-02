@@ -1,0 +1,138 @@
+[gd_scene load_steps=10 format=3 uid="uid://dy5bt0ldcsddc"]
+
+[ext_resource type="Script" uid="uid://bcnvkj1la056w" path="res://scripts/control.gd" id="1_fj5cn"]
+[ext_resource type="Texture2D" uid="uid://dksemi0vbrgrh" path="res://assets/cars-removebg-preview.png" id="2_6a6wx"]
+[ext_resource type="Texture2D" uid="uid://ccyltelg51e3v" path="res://assets/keyboard_bracket_greater.png" id="2_kbped"]
+[ext_resource type="Texture2D" uid="uid://bo88spinjwmnj" path="res://assets/keyboard_bracket_greater_outline.png" id="3_fj5cn"]
+[ext_resource type="Texture2D" uid="uid://02wxg20dg6me" path="res://assets/keyboard_bracket_less.png" id="4_iy58a"]
+[ext_resource type="Texture2D" uid="uid://ccjtnwbiv0u64" path="res://assets/keyboard_bracket_less_outline.png" id="5_6a6wx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fj5cn"]
+atlas = ExtResource("2_6a6wx")
+region = Rect2(32, 0, 64, 128)
+
+[sub_resource type="SystemFont" id="SystemFont_fj5cn"]
+font_names = PackedStringArray("Fantasy")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iy58a"]
+bg_color = Color(0.95608, 0.30918, 0.694053, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fj5cn")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.333333, 0.6, 1, 1)
+
+[node name="speed" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 497.0
+offset_top = 106.0
+offset_right = 866.0
+offset_bottom = 182.0
+theme_override_font_sizes/font_size = 50
+text = "SPEED"
+
+[node name="brake" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 497.0
+offset_top = 224.0
+offset_right = 866.0
+offset_bottom = 300.0
+theme_override_font_sizes/font_size = 50
+text = "BRAKE"
+
+[node name="control" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 497.0
+offset_top = 339.0
+offset_right = 994.0
+offset_bottom = 417.0
+theme_override_font_sizes/font_size = 50
+text = "CONTROLS"
+
+[node name="car" type="Sprite2D" parent="ColorRect"]
+texture_filter = 1
+position = Vector2(251.678, 256.5)
+scale = Vector2(4.19756, 3.50781)
+texture = SubResource("AtlasTexture_fj5cn")
+
+[node name="right" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1055.0
+offset_top = 234.0
+offset_right = 1127.0
+offset_bottom = 300.0
+texture_normal = ExtResource("2_kbped")
+texture_pressed = ExtResource("2_kbped")
+texture_hover = ExtResource("2_kbped")
+texture_disabled = ExtResource("3_fj5cn")
+texture_focused = ExtResource("2_kbped")
+
+[node name="left" type="TextureButton" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 9.0
+offset_top = 236.0
+offset_right = 77.0
+offset_bottom = 305.0
+texture_normal = ExtResource("4_iy58a")
+texture_pressed = ExtResource("4_iy58a")
+texture_hover = ExtResource("4_iy58a")
+texture_disabled = ExtResource("5_6a6wx")
+texture_focused = ExtResource("4_iy58a")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 976.0
+offset_top = 550.0
+offset_right = 1127.0
+offset_bottom = 619.0
+theme_override_colors/font_hover_pressed_color = Color(0, 0.615686, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.615686, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0.615686, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0.615686, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0.615686, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0.615686, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0.615686, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0.615686, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.615686, 0, 1)
+theme_override_colors/font_color = Color(0, 0.615686, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0.615686, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.615686, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_fj5cn")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxFlat_iy58a")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_iy58a")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_iy58a")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_iy58a")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_iy58a")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_iy58a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_iy58a")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_iy58a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_iy58a")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_iy58a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_iy58a")
+text = "Start"
+
+[connection signal="pressed" from="right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

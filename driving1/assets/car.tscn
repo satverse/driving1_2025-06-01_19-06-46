@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6okbacw6jmh0"]
+
+[ext_resource type="Script" uid="uid://dsx76cwhgt2y7" path="res://scripts/car2.gd" id="1_ho5m3"]
+[ext_resource type="Texture2D" uid="uid://c5gasqo468yyn" path="res://assets/car_blue_1.png" id="1_yj4dp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2d0ee"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yj4dp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ho5m3"]
+radius = 27.0
+height = 128.0
+
+[node name="car" type="CharacterBody2D"]
+script = ExtResource("1_ho5m3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_2d0ee")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_ho5m3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_ho5m3")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = 0
+limit_right = 1152
+limit_bottom = 648
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

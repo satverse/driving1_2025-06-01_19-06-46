@@ -1,0 +1,129 @@
+[gd_scene load_steps=6 format=3 uid="uid://ic4hl05p3gpq"]
+
+[ext_resource type="Texture2D" uid="uid://byb0w4f4em8su" path="res://assets/photo_6172473668211427352_y.jpg" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://gacmglogtsdp" path="res://scripts/main_menu.gd" id="1_7vrkn"]
+
+[sub_resource type="Theme" id="Theme_rhts7"]
+
+[sub_resource type="SystemFont" id="SystemFont_rhts7"]
+font_names = PackedStringArray("Fantasy")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vrkn"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0.790658, 0.544227, 0.153459, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.791036, 0.83243, 0.537238, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+shadow_size = 3
+
+[node name="main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7vrkn")
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -4.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_06t4h")
+expand_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 408.0
+offset_right = 1046.0
+offset_bottom = 545.0
+theme_override_constants/separation = 73
+alignment = 1
+
+[node name="start_button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_rhts7")
+theme_override_colors/font_hover_color = Color(0.0208331, 0.0190295, 0.0154246, 1)
+theme_override_colors/icon_normal_color = Color(0.830736, 0.341863, 0.501238, 1)
+theme_override_colors/font_outline_color = Color(0.316916, 0.139054, 0.0324249, 1)
+theme_override_colors/font_color = Color(0.0235294, 0.027451, 0.00392157, 1)
+theme_override_fonts/font = SubResource("SystemFont_rhts7")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/focus = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7vrkn")
+text = "Start"
+metadata/_edit_lock_ = true
+
+[node name="aboutus_button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_rhts7")
+theme_override_colors/font_hover_color = Color(0.0208331, 0.0190295, 0.0154246, 1)
+theme_override_colors/icon_normal_color = Color(0.830736, 0.341863, 0.501238, 1)
+theme_override_colors/font_outline_color = Color(0.316916, 0.139054, 0.0324249, 1)
+theme_override_colors/font_color = Color(0.0235294, 0.027451, 0.00392157, 1)
+theme_override_fonts/font = SubResource("SystemFont_rhts7")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/focus = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7vrkn")
+text = "About Us"
+metadata/_edit_lock_ = true
+
+[node name="exit_button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_rhts7")
+theme_override_colors/font_hover_color = Color(0.0208331, 0.0190295, 0.0154246, 1)
+theme_override_colors/icon_normal_color = Color(0.830736, 0.341863, 0.501238, 1)
+theme_override_colors/font_outline_color = Color(0.316916, 0.139054, 0.0324249, 1)
+theme_override_colors/font_color = Color(0.0235294, 0.027451, 0.00392157, 1)
+theme_override_fonts/font = SubResource("SystemFont_rhts7")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/focus = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7vrkn")
+text = "Exit"
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="HBoxContainer/start_button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/aboutus_button" to="." method="_on_aboutus_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/exit_button" to="." method="_on_exit_button_pressed"]
